@@ -5,6 +5,7 @@
 var tape = require( 'tape' );
 var abs = require( 'math-abs' );
 var pow = require( 'math-power' );
+var exp = require( 'math-exp' );
 var incrspace = require( 'compute-incrspace' );
 var pinf = require( 'const-pinf-float64' );
 var ninf = require( 'const-ninf-float64' );
@@ -23,7 +24,7 @@ tape( 'main export is a function', function test( t ) {
 	t.end();
 });
 
-tape( 'the function agrees with `Math.exp(x) - 1` for most `x`', function test( t ) {
+tape( 'the function agrees with `exp(x) - 1` for most `x`', function test( t ) {
 	var expected;
 	var delta;
 	var val;
@@ -35,7 +36,7 @@ tape( 'the function agrees with `Math.exp(x) - 1` for most `x`', function test( 
 	for ( i = 0; i < x.length; i++ ) {
 		val = x[ i ];
 		y = expm1( val );
-		expected = Math.exp( val ) - 1;
+		expected = exp( val ) - 1;
 		delta = abs( y - expected );
 		tol = 1e-12 * Math.max( 1, abs( y ), abs( expected ) );
 		t.ok( delta <= tol, 'within tolerance. x: ' + val + '. Value: ' + y + '. Expected: ' + expected + '. Tolerance: ' + tol + '.' );
