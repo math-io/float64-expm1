@@ -1,6 +1,6 @@
 using JSON
 
-x = linspace( 1e-400, 1e-1, 10000 )
+x = linspace( 1e-400, -1, 10000 )
 
 y = expm1( x )
 println( y )
