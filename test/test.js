@@ -4,6 +4,7 @@
 
 var tape = require( 'tape' );
 var abs = require( 'math-abs' );
+var pow = require( 'math-power' );
 var incrspace = require( 'compute-incrspace' );
 var expm1 = require( './../lib' );
 
@@ -28,7 +29,7 @@ tape( 'the function agrees with `Math.exp(x) - 1` for most `x`', function test( 
 	var y;
 	var val;
 	var i;
-	x = incrspace( 0, 50, 0.5 );
+	x = incrspace( -10, 50, 0.5 );
 	for ( i = 0; i < x.length; i++ ) {
 		val = x[ i ];
 		y = expm1( val );
@@ -40,7 +41,7 @@ tape( 'the function agrees with `Math.exp(x) - 1` for most `x`', function test( 
 	t.end();
 });
 
-tape( 'the function correctly calculates exp(x)-1 for very small x', function test( t ) {
+tape( 'the function correctly calculates `exp(x) - 1` for very small `x`', function test( t ) {
 	var delta;
 	var tol;
 	var v;
@@ -52,6 +53,30 @@ tape( 'the function correctly calculates exp(x)-1 for very small x', function te
 		tol = 1e-12 * Math.max( 1, abs( v ), abs( small.expected[ i ] ) );
 		t.ok( delta <= tol, 'within tolerance. x: ' + small.data[ i ] + '. Value: ' + v + '. Expected: ' + small.expected[ i ] + '. Tolerance: ' + tol + '.' );
 	}
+	t.end();
+});
+
+tape( 'the function returns `+infinity` for very large `x`', function test( t ) {
+	t.equal( expm1( 800 ), Number.POSITIVE_INFINITY, 'equals +infinity' );
+	t.equal( expm1( 900 ), Number.POSITIVE_INFINITY, 'equals +infinity' );
+	t.equal( expm1( 1000 ), Number.POSITIVE_INFINITY, 'equals +infinity' );
+	t.end();
+});
+
+tape( 'the function returns `-1` for negative, large `x`', function test( t ) {
+	t.equal( expm1( -800 ), -1, 'equals -1' );
+	t.equal( expm1( -900 ), -1, 'equals -1' );
+	t.equal( expm1( -1000 ), -1, 'equals -1' );
+	t.end();
+});
+
+tape( 'the function returns `x` for `x` smaller than `2**-54`', function test( t ) {
+	var val = pow( 2, -80 );
+	t.equal( expm1( val ), val, 'equals input value' );
+	val = pow( 2, -55 );
+	t.equal( expm1( val ), val, 'equals input value' );
+	val = pow( 2, -60 );
+	t.equal( expm1( val ), val, 'equals input value' );
 	t.end();
 });
 
