@@ -2,17 +2,7 @@ expm1
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Computes exp(x) - 1.
-
-The natural [exponential function][exponential-function] `exp(x)` is defined as
-
-<div class="equation" align="center" data-raw-text="y = e^x" data-equation="eq:natural_exponential_function">
-	<img src="https://cdn.rawgit.com/math-io/exp/1ecfe1ee0dc303c2ebb2b0471f0328106eb915cd/docs/img/eqn.svg" alt="Natural exponential function definition.">
-	<br>
-</div>
-
-where `e` is [Euler's][eulers-number] number.
-
+> Computes `exp(x) - 1`.
 
 ## Installation
 
@@ -148,4 +138,3 @@ Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 
 [compute-io]: https://github.com/compute-io/
 [exponential-function]: https://en.wikipedia.org/wiki/Exponential_function
-[eulers-number]: https://en.wikipedia.org/wiki/E_(mathematical_constant)
