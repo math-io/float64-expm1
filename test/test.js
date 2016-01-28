@@ -6,6 +6,8 @@ var tape = require( 'tape' );
 var abs = require( 'math-abs' );
 var pow = require( 'math-power' );
 var incrspace = require( 'compute-incrspace' );
+var pinf = require( 'const-pinf-float64' );
+var ninf = require( 'const-ninf-float64' );
 var expm1 = require( './../lib' );
 
 
@@ -41,7 +43,7 @@ tape( 'the function agrees with `Math.exp(x) - 1` for most `x`', function test( 
 	t.end();
 });
 
-tape( 'the function correctly calculates `exp(x) - 1` for very small `x`', function test( t ) {
+tape( 'the function accurately computes `exp(x) - 1` for very small `x`', function test( t ) {
 	var delta;
 	var tol;
 	var v;
@@ -57,9 +59,9 @@ tape( 'the function correctly calculates `exp(x) - 1` for very small `x`', funct
 });
 
 tape( 'the function returns `+infinity` for very large `x`', function test( t ) {
-	t.equal( expm1( 800 ), Number.POSITIVE_INFINITY, 'equals +infinity' );
-	t.equal( expm1( 900 ), Number.POSITIVE_INFINITY, 'equals +infinity' );
-	t.equal( expm1( 1000 ), Number.POSITIVE_INFINITY, 'equals +infinity' );
+	t.equal( expm1( 800 ), pinf, 'equals +infinity' );
+	t.equal( expm1( 900 ), pinf, 'equals +infinity' );
+	t.equal( expm1( 1000 ), pinf, 'equals +infinity' );
 	t.end();
 });
 
@@ -81,11 +83,11 @@ tape( 'the function returns `x` for `x` smaller than `2**-54`', function test( t
 });
 
 tape( 'the function returns `-1` if provided `-infinity`', function test( t ) {
-	t.equal( expm1( Number.NEGATIVE_INFINITY ), -1, 'equals -1' );
+	t.equal( expm1( ninf ), -1, 'equals -1' );
 	t.end();
 });
 
 tape( 'the function returns `+infinity` if provided `+infinity`', function test( t ) {
-	t.equal( expm1( Number.POSITIVE_INFINITY ), Number.POSITIVE_INFINITY, 'equals +infinity' );
+	t.equal( expm1( pinf ), pinf, 'equals +infinity' );
 	t.end();
 });
