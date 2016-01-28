@@ -52,7 +52,7 @@
     "math-float64-get-high-word": "^1.0.0",
     "math-float64-get-low-word": "^1.0.0",
     "math-float64-set-high-word": "^1.0.0",
-    "math-float64-signbit": "^1.0.0",
+    "math-float64-signbit": "^1.0.0"
   },
   "devDependencies": {
     "browserify": "12.x.x",
