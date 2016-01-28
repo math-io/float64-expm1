@@ -24,12 +24,12 @@ tape( 'main export is a function', function test( t ) {
 });
 
 tape( 'the function agrees with `Math.exp(x) - 1` for most `x`', function test( t ) {
-	var delta;
-	var tol;
 	var expected;
+	var delta;
+	var val;
+	var tol;
 	var x;
 	var y;
-	var val;
 	var i;
 	x = incrspace( -10, 50, 0.5 );
 	for ( i = 0; i < x.length; i++ ) {
