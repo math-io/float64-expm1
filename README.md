@@ -19,7 +19,7 @@ var expm1 = require( 'math-expm1' );
 
 #### expm1( x )
 
-Computes `exp(x) - 1`, where `exp(x)` is the natural [exponential function][exponential-function].
+Computes `exp(x) - 1`, where `exp(x)` is the natural [exponential function][math-exp].
 
 ``` javascript
 var val = expm1( 0.2 );
@@ -137,4 +137,4 @@ Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 [testling]: https://ci.testling.com
 
 [compute-io]: https://github.com/compute-io/
-[exponential-function]: https://en.wikipedia.org/wiki/Exponential_function
+[math-exp]: https://github.com/math-io/exp
