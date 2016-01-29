@@ -181,3 +181,14 @@ tape( 'the function returns `+infinity` if provided `+infinity`', function test(
 	t.equal( expm1( pinf ), pinf, 'equals +infinity' );
 	t.end();
 });
+
+tape( 'the function returns `0` if provided `0`', function test( t ) {
+	t.equal( expm1( 0 ), 0, 'equals 0' );
+	t.end();
+});
+
+tape( 'the function returns `0` if provided `-0`', function test( t ) {
+	t.equal( expm1( 0 ), -0, 'equals 0' );
+	t.end();
+});
+
