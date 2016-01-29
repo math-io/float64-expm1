@@ -192,3 +192,9 @@ tape( 'the function returns `0` if provided `-0`', function test( t ) {
 	t.end();
 });
 
+tape( 'the function returns `NaN` if provided `NaN`', function test( t ) {
+	var val = expm1( NaN );
+	t.ok( val !== val, 'equals NaN' );
+	t.end();
+});
+
