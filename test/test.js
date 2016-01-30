@@ -62,7 +62,7 @@ tape( 'the function accurately computes `exp(x) - 1` for negative medium numbers
 	for ( i = 0; i < x.length; i++ ) {
 		v = expm1( x[ i ] );
 		delta = abs( v - expected[ i ] );
-		tol = 1e-12 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
+		tol = 1e-16 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
 		t.ok( delta <= tol, 'within tolerance. x: ' + x[ i ] + '. Value: ' + v + '. Expected: ' + expected[ i ] + '. Tolerance: ' + tol + '.' );
 	}
 	t.end();
@@ -82,7 +82,7 @@ tape( 'the function accurately computes `exp(x) - 1` for positive medium numbers
 	for ( i = 0; i < x.length; i++ ) {
 		v = expm1( x[ i ] );
 		delta = abs( v - expected[ i ] );
-		tol = 1e-12 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
+		tol = 1e-16 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
 		t.ok( delta <= tol, 'within tolerance. x: ' + x[ i ] + '. Value: ' + v + '. Expected: ' + expected[ i ] + '. Tolerance: ' + tol + '.' );
 	}
 	t.end();
@@ -102,7 +102,7 @@ tape( 'the function accurately computes `exp(x) - 1` for negative small numbers'
 	for ( i = 0; i < x.length; i++ ) {
 		v = expm1( x[ i ] );
 		delta = abs( v - expected[ i ] );
-		tol = 1e-12 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
+		tol = 1e-16 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
 		t.ok( delta <= tol, 'within tolerance. x: ' + x[ i ] + '. Value: ' + v + '. Expected: ' + expected[ i ] + '. Tolerance: ' + tol + '.' );
 	}
 	t.end();
@@ -122,7 +122,7 @@ tape( 'the function accurately computes `exp(x) - 1` for positive small numbers'
 	for ( i = 0; i < x.length; i++ ) {
 		v = expm1( x[ i ] );
 		delta = abs( v - expected[ i ] );
-		tol = 1e-12 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
+		tol = 1e-16 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
 		t.ok( delta <= tol, 'within tolerance. x: ' + x[ i ] + '. Value: ' + v + '. Expected: ' + expected[ i ] + '. Tolerance: ' + tol + '.' );
 	}
 	t.end();
@@ -142,7 +142,7 @@ tape( 'the function accurately computes `exp(x) - 1` for very small `x`', functi
 	for ( i = 0; i < x.length; i++ ) {
 		v = expm1( x[ i ] );
 		delta = abs( v - expected[ i ] );
-		tol = 1e-12 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
+		tol = 1e-16 * Math.max( 1, abs( v ), abs( expected[ i ] ) );
 		t.ok( delta <= tol, 'within tolerance. x: ' + x[ i ] + '. Value: ' + v + '. Expected: ' + expected[ i ] + '. Tolerance: ' + tol + '.' );
 	}
 	t.end();
