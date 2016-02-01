@@ -187,8 +187,9 @@ tape( 'the function returns `0` if provided `0`', function test( t ) {
 	t.end();
 });
 
-tape( 'the function returns `0` if provided `-0`', function test( t ) {
-	t.equal( expm1( 0 ), -0, 'equals 0' );
+tape( 'the function returns `-0` if provided `-0` (IEEE 754-2008)', function test( t ) {
+	t.equal( expm1( -0 ), 0, 'returns 0' );
+	t.equal( 1/expm1( -0 ), ninf, 'equals -0' );
 	t.end();
 });
 
