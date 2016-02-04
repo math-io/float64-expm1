@@ -1,6 +1,6 @@
 {
   "name": "math-float64-expm1",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Computes exp(x) - 1.",
   "author": {
     "name": "Philipp Burckhardt",
