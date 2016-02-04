@@ -1,5 +1,5 @@
 {
-  "name": "math-expm1",
+  "name": "math-float64-expm1",
   "version": "0.0.0",
   "description": "Computes exp(x) - 1.",
   "author": {
@@ -27,7 +27,7 @@
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "git://github.com/math-io/expm1.git"
+    "url": "git://github.com/math-io/float64-expm1.git"
   },
   "keywords": [
     "compute.io",
@@ -48,7 +48,7 @@
     "number"
   ],
   "bugs": {
-    "url": "https://github.com/math-io/expm1/issues"
+    "url": "https://github.com/math-io/float64-expm1/issues"
   },
   "dependencies": {
     "const-ninf-float64": "^1.0.0",

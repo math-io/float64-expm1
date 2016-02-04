@@ -7,14 +7,14 @@ expm1
 ## Installation
 
 ``` bash
-$ npm install math-expm1
+$ npm install math-float64-expm1
 ```
 
 
 ## Usage
 
 ``` javascript
-var expm1 = require( 'math-expm1' );
+var expm1 = require( 'math-float64-expm1' );
 ```
 
 #### expm1( x )
@@ -39,7 +39,7 @@ val = expm1( NaN );
 ## Examples
 
 ``` javascript
-var expm1 = require( 'math-expm1' );
+var expm1 = require( 'math-float64-expm1' );
 
 var x;
 var i;
@@ -114,23 +114,23 @@ $ make view-browser-tests
 Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 
 
-[npm-image]: http://img.shields.io/npm/v/math-expm1.svg
-[npm-url]: https://npmjs.org/package/math-expm1
+[npm-image]: http://img.shields.io/npm/v/math-float64-expm1.svg
+[npm-url]: https://npmjs.org/package/math-float64-expm1
 
 [build-image]: http://img.shields.io/travis/math-io/expm1/master.svg
-[build-url]: https://travis-ci.org/math-io/expm1
+[build-url]: https://travis-ci.org/math-io/float64-expm1
 
-[coverage-image]: https://img.shields.io/codecov/c/github/math-io/expm1/master.svg
-[coverage-url]: https://codecov.io/github/math-io/expm1?branch=master
+[coverage-image]: https://img.shields.io/codecov/c/github/math-io/float64-expm1/master.svg
+[coverage-url]: https://codecov.io/github/math-io/float64-expm1?branch=master
 
-[dependencies-image]: http://img.shields.io/david/math-io/expm1.svg
-[dependencies-url]: https://david-dm.org/math-io/expm1
+[dependencies-image]: http://img.shields.io/david/math-io/float64-expm1.svg
+[dependencies-url]: https://david-dm.org/math-io/float64-expm1
 
-[dev-dependencies-image]: http://img.shields.io/david/dev/math-io/expm1.svg
-[dev-dependencies-url]: https://david-dm.org/dev/math-io/expm1
+[dev-dependencies-image]: http://img.shields.io/david/dev/math-io/float64-expm1.svg
+[dev-dependencies-url]: https://david-dm.org/dev/math-io/float64-expm1
 
-[github-issues-image]: http://img.shields.io/github/issues/math-io/expm1.svg
-[github-issues-url]: https://github.com/math-io/expm1/issues
+[github-issues-image]: http://img.shields.io/github/issues/math-io/float64-expm1.svg
+[github-issues-url]: https://github.com/math-io/float64-expm1/issues
 
 [tape]: https://github.com/substack/tape
 [istanbul]: https://github.com/gotwarlost/istanbul
