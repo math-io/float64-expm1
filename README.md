@@ -117,7 +117,7 @@ Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 [npm-image]: http://img.shields.io/npm/v/math-float64-expm1.svg
 [npm-url]: https://npmjs.org/package/math-float64-expm1
 
-[build-image]: http://img.shields.io/travis/math-io/expm1/master.svg
+[build-image]: http://img.shields.io/travis/math-io/float64-expm1/master.svg
 [build-url]: https://travis-ci.org/math-io/float64-expm1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/math-io/float64-expm1/master.svg
